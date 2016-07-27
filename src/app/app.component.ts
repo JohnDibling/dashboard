@@ -5,6 +5,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
 
+import { Title } from '@angular/platform-browser'
+
 /*
  * App Component
  * Top Level Component
@@ -52,11 +54,12 @@ import { AppState } from './app.service';
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   loading = false;
-  name = 'Angular 2 Webpack Starter';
+  name = 'Thinkpiece Dashboard';
   url = 'https://twitter.com/AngularClass';
 
   constructor(
-    public appState: AppState) {
+    public appState: AppState,
+    private titleService: Title) {
 
   }
 

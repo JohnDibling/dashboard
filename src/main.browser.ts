@@ -2,6 +2,7 @@
  * Providers provided by Angular
  */
 import { bootstrap } from '@angular/platform-browser-dynamic';
+import { Title } from '@angular/platform-browser'
 /*
 * Platform and Environment
 * our providers/directives/pipes
@@ -27,6 +28,7 @@ export function main(initialHmrState?: any): Promise<any> {
     ...PLATFORM_PROVIDERS,
     ...ENV_PROVIDERS,
     ...APP_PROVIDERS,
+    Title
   ])
   .then(decorateComponentRef)
   .catch(err => console.error(err));

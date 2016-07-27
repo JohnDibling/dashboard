@@ -4,6 +4,7 @@ import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLarge } from './x-large';
 
+
 @Component({
   // The selector is what angular internally uses
   // for `document.querySelectorAll(selector)` in our index.html
@@ -35,7 +36,17 @@ export class Home {
 
   ngOnInit() {
     console.log('hello `Home` component');
-    // this.title.getData().subscribe(data => this.data = data);
+    console.log('this.title.getData() = ' this.title.getData())
+    this.title.getData().subscribe(
+      function (x) {
+        console.log('Next: %s', x.value);
+      },
+      function (err) {
+        console.log('Error: %s', err);
+      },
+      function () {
+        console.log('Completed.');
+      });
   }
 
   submitState(value) {
