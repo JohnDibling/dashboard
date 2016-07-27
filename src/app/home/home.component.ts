@@ -36,7 +36,7 @@ export class Home {
 
   ngOnInit() {
     console.log('hello `Home` component');
-    console.log('this.title.getData() = ' this.title.getData())
+    console.log('this.title.getData() = ', this.title.getData())
     this.title.getData().subscribe(
       function (x) {
         console.log('Next: %s', x.value);
